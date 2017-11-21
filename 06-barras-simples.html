@@ -54,9 +54,9 @@
                       .enter()
                         .append('rect')
                         .attr('x', 0) // Que tal uma função com dois parâmetros: d e i?
-                        .attr('y', 0)
-                        .attr('width', 30)
-                        .attr('height', 20);
+                        .attr('y', function(d, i){return i*altura/dados.length})
+                        .attr('width', function(d, i){return d})
+                        .attr('height', altura/dados.length-4);
 
       /* Mais dicas :
        * - As barras ficam mais legíveis se não encostarem umas nas outras.
