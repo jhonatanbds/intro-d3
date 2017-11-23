@@ -49,6 +49,7 @@
        * (Nem pense em fazer hardcoded :)).
        */
 
+<<<<<<< HEAD
       var barras = svg.selectAll('rect')
                       .data(dados)
                       .enter()
@@ -57,12 +58,25 @@
                         .attr('y', function(d, i){return i*altura/dados.length})
                         .attr('width', function(d, i){return d})
                         .attr('height', altura/dados.length-4);
+=======
+      svg.selectAll('rect')
+          .data(dados)
+          .enter()
+            .append('rect')
+              .attr('x', 0) // A função com dois parâmetros pode entrar aqui
+              .attr('y', 0) // e aqui
+              .attr('width', 30)
+              .attr('height', 20);
+>>>>>>> upstream/master
 
       /* Mais dicas :
-       * - As barras ficam mais legíveis se não encostarem umas nas outras.
+       * - As barras ficam mais legíveis se não encostarem umas nas outras. Para isso
+       * a maneira mais fácil é diminuir um pouco a largura delas (como elas estao deitadas,
+       * é a altura).
        * - Que tal deixar a barra com o mouse em cima (hover) em uma cor diferente?
-       * vê lá nosso primeiro exemplo.
-       * - Sua visualização funciona se mudarmos a altura, largura ou o número de pontos, certo?
+       * Lembra como lá no nosso primeiro exemplo.
+       * - Sua visualização funciona se mudarmos a altura, largura ou o tamanho do array, certo?
+       * Se ela tiver números mágicos, vamos chamar Dalton, Jorge e João!
        * - O comprimento do array de dados é dados.length
        */
 
