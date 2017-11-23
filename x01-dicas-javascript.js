@@ -45,6 +45,12 @@ sobre10(5)
  * coordenadas nos 500 pixeis do meu eixo x?
  */
 
+ans = function(a, b, c, d) {
+      return function(n) {
+        return (d-c)*(n-a)/(b-a)
+      }
+    }
+
 // =========================================
 // PARTE 2 : funções como parâmetros
 // =========================================
